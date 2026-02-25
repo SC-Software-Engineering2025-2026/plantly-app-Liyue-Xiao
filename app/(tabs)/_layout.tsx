@@ -2,11 +2,13 @@ import { Redirect, Tabs } from "expo-router";
 import Entypo from "@expo/vector-icons/Entypo";
 import Feather from "@expo/vector-icons/Feather";
 import { theme } from "@/theme";
+import { useUserStore } from "@/store/userStore";
 //npx eslint . --fix MY CODE SERVIVE BASE ON THIS I NEED HELP
 
-const hasFinishedOnboarding = false;
-
 export default function Layout() {
+  const hasFinishedOnboarding = useUserStore(
+    (store) => store.hasFinishedOnboarding,
+  );
   if (!hasFinishedOnboarding) {
     return <Redirect href="/onBoarding" />;
   }

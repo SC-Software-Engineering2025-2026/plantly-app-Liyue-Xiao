@@ -1,11 +1,13 @@
 import { StatusBar } from "expo-status-bar";
-import { StyleSheet, Text, View } from "react-native";
+import { StyleSheet, Text, View, Button } from "react-native";
 import { theme } from "@/theme";
+import { useUserStore } from "@/store/userStore";
 
 export default function App() {
+  const toggleHasOnboarded = useUserStore((store) => store.toggleHasOnboarded);
   return (
     <View style={styles.container}>
-      <Text style={styles.text}> Open up App.tsx to start working</Text>
+      <Button title="Go back to onboarding" onPress={toggleHasOnboarded} />
       <StatusBar style="auto" />
     </View>
   );
@@ -17,8 +19,5 @@ const styles = StyleSheet.create({
     backgroundColor: theme.colorWhite,
     alignItems: "center",
     justifyContent: "center",
-  },
-  text: {
-    fontSize: 20,
   },
 });

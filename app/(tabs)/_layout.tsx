@@ -7,11 +7,13 @@ import { useUserStore } from "@/store/userStore";
 
 export default function Layout() {
   const hasFinishedOnboarding = useUserStore(
-    (store) => store.hasFinishedOnboarding,
+    (state) => state.hasFinishedOnboarding,
   );
+
   if (!hasFinishedOnboarding) {
-    return <Redirect href="/onBoarding" />;
+    return <Redirect href="/onboarding" />;
   }
+
   return (
     <Tabs screenOptions={{ tabBarActiveTintColor: theme.colorGreen }}>
       <Tabs.Screen

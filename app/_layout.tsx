@@ -8,7 +8,7 @@ export default function Layout() {
         options={{ headerShown: false, animation: "fade" }}
       />
       <Stack.Screen
-        name="onBoarding"
+        name="onboarding"
         options={{ headerShown: false, animation: "fade" }}
       />
     </Stack>

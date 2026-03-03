@@ -1,14 +1,16 @@
-import { StatusBar } from "expo-status-bar";
-import { StyleSheet, Text, View, Button } from "react-native";
+import { StyleSheet, View } from "react-native";
 import { theme } from "@/theme";
 import { useUserStore } from "@/store/userStore";
+import { PlantlyButton } from "@/components/PlantlyButton";
 
 export default function App() {
   const toggleHasOnboarded = useUserStore((store) => store.toggleHasOnboarded);
   return (
     <View style={styles.container}>
-      <Button title="Go back to onboarding" onPress={toggleHasOnboarded} />
-      <StatusBar style="auto" />
+      <PlantlyButton
+        title="Go back to onboarding"
+        onPress={toggleHasOnboarded}
+      />
     </View>
   );
 }

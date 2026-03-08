@@ -7,7 +7,7 @@ export function PlantlyImage() {
 
   return (
     <Image
-      source={require("../assets/images/plantly.png")}
+      source={require("../assets/plantly.png")}
       style={{ width: imageSize, height: imageSize }}
     />
   );

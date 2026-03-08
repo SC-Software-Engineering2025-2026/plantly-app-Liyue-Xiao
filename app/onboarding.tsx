@@ -47,6 +47,7 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
     color: theme.colorWhite,
     marginBottom: 12,
+    textAlign: "center",
   },
   tagline: {
     fontSize: 24,

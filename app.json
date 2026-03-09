@@ -21,10 +21,33 @@
         "backgroundColor": "#ffffff"
       },
       "edgeToEdgeEnabled": true,
-      "predictiveBackGestureEnabled": false
+      "predictiveBackGestureEnabled": false,
+      "package": "com.anonymous.plantly"
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "plugins": [
+      "expo-router",
+      [
+        "expo-font",
+        {
+          "fonts": [
+            "node_modules/@expo-google-fonts/caveat/400Regular/Caveat_400Regular.ttf"
+          ]
+        }
+      ],
+      [
+        "expo-quick-actions",
+        {
+          "androidIcon":{
+            "leaf":{
+              "foregroundImage": "./assets/leaf.png",
+              "backgroundColor": "#ffffff"
+            }
+          }
+        }
+      ]
+    ]
   }
 }

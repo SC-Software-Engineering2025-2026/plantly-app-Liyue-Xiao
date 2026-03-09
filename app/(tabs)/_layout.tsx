@@ -1,4 +1,4 @@
-import { Redirect, Tabs, Link } from "expo-router";
+import { Redirect, Tabs, Link, SplashScreen } from "expo-router";
 import Entypo from "@expo/vector-icons/Entypo";
 import Feather from "@expo/vector-icons/Feather";
 import { theme } from "@/theme";
@@ -12,6 +12,7 @@ export default function Layout() {
     (state) => state.hasFinishedOnboarding,
   );
 
+  SplashScreen.hideAsync();
   if (!hasFinishedOnboarding) {
     return <Redirect href="/onboarding" />;
   }
